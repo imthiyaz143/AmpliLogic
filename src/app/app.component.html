@@ -1,0 +1,51 @@
+<div class="container">
+  <nav class="top-nav">
+    <img src="assets/unnamed.png">
+    <ul class="nav-list">
+      <li> <a href="#" ><img src="assets/org structure.png" height="30px" width="30px"> <i
+            class="bi bi-person-rolodex">Organisation Structure</i></a></li>
+      <li> <a href="#"><img src="assets/config.png" height="30px" width="30px"> Configurations</a></li>
+      <li> <a href="#"><img src="assets/reports.png" height="30px" width="30px">Reports</a></li>
+      <li> <a href="#"><img src="assets/ETL.png" height="30px" width="30px">ETL</a></li>
+
+      <li><img src="assets/usa.png" height="30px" width="30px"></li>
+      <li><img src="assets/notify.png" height="30px" width="30px"></li>
+      <li><img src="assets/photo.png" height="30px" width="30px"></li>
+
+
+    </ul>
+  </nav>
+
+  <button class="btn btn-primary" id="mainbutton" type="button" data-bs-toggle="offcanvas" data-bs-target="#slide"
+    (click)="startProgress()">
+    start
+  </button>
+
+  <div class="bottom-nav">
+    <img src="assets/unnamed.png">
+    <p class="copy-right"><i class="bi bi-c-circle">copyrights 2010-2013 Amplelogic | ALL Rights Reserved</i></p>
+  </div>
+
+
+  <div class="offcanvas offcanvas-bottom"data-bs-backdrop="false"  id="slide" [ngClass]="{'hidden hiding':!showProgress}">
+
+    <!-- <img src="assets/progressbar.png" height="90px" width="100px"> -->
+    <mat-progress-bar mode="determinate" [value]="progressValue"></mat-progress-bar>
+
+  </div>
+
+  <!-- <button type="button" id="offcanvas-btn" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+
+
+  <!-- <div *ngIf="showPopup" class="offcanvas"> -->
+  <!-- <button mat-stroked-button (click)="showPopup = false" class="close-button" >Close</button> -->
+  <!-- Add the content of the off-canvas popup here -->
+  <!-- <p>Migration process has been completed.</p> -->
+
+  <router-outlet></router-outlet>
+
+
+
+
+
+</div>
